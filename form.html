@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name and Roll Number Form</title>
+</head>
+<body>
+    <h2>Student Information</h2>
+    <form action="/submit" method="POST" onsubmit="incrementCount()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>Total Submissions: <span id="submissionCount">0</span></p>
+
+    <script>
+        let count = 0;
+
+        function incrementCount() {
+            count++;
+            document.getElementById("submissionCount").textContent = count;
+        }
+    </script>
+</body>
+</html>
